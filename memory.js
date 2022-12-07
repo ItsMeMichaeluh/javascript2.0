@@ -1,7 +1,7 @@
 
 var userClick1 = 0;
 var userClick2 = 0;
-var score = 0;
+var fouten = 1;
 var userSelectedCard1 = "";
 var userSelectedCard2 = "";
 var matches = 0;
@@ -11,7 +11,7 @@ function checkClickedCard(cardNum, cardId){
 //Geklikte kaart disablen, want je mag maar een keer op dezelfde kaart klikken
 document.getElementById(cardId).disabled = true;
 //juiste waarde op de kaart zetten
-document.getElementById(cardId).value = cardNum;
+document.getElementById(cardId).style = "background-image: url("+cardNum+".jpeg)";
 //document.getElementById(cardId).style = "background: url(myimage.png)";
 
 //Lees en onthoudt klik1 en klik2
@@ -36,12 +36,13 @@ if(userClick1==userClick2){
     document.getElementById('tekst').innerHTML = "Onjuist"
     document.getElementById(userSelectedCard1).disabled = false;
     document.getElementById(userSelectedCard2).disabled = false;
+    fouten++
     setTimeout(throwback, 350)
 
 }
 
-score++
-updateScore()
+
+updatefouten()
 userClick1 = 0;
 userClick2 = 0;
 }
@@ -62,18 +63,18 @@ while(cardsArr.length>0){
     document.getElementById("memoryCards").innerHTML += '<input type="button" value="" id="kaart' + cardsArr.length +'" class="memoryCard" onclick="checkClickedCard(' + (cardsArr[randomNumber] +1) + ', \'kaart' +cardsArr.length + '\');" />';
     cardsArr.splice(randomNumber,1);
     }
-    score=0
+    fouten=0
     matches=0
-    updateScore()
+    updatefouten()
 }
 
 function throwback() {
-    document.getElementById(userSelectedCard1).value = "";
-    document.getElementById(userSelectedCard2).value = "";
+    document.getElementById(userSelectedCard1).style = "";
+    document.getElementById(userSelectedCard2).style = "";
 }
 
-function updateScore() {
-    document.getElementById('score').innerHTML = "Score:"+score
+function updatefouten() {
+    document.getElementById('fouten').innerHTML = "fouten:"+fouten
 }
 function playAudio() {
     document.getElementById("myAudio").play()
