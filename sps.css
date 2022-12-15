@@ -1,0 +1,52 @@
+* {
+    font-family:Verdana, Geneva, Tahoma, sans-serif}
+    p {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    h1 {
+        justify-content: center;
+        text-align: center;
+        letter-spacing: 3;
+        text-transform: uppercase;
+    }
+    .btn0 {
+        margin-left: 4rem;
+        height: 200px;
+        width: 400px;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        background-image: url(/steen.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 2px solid white;
+        background-size: contain
+    }
+    .btn1 {
+        margin-left: 4rem;
+        height: 200px;
+        width: 400px;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        background-image: url(/papier.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 2px solid white;
+    }
+    .btn2 {
+        margin-left: 4rem;
+        height: 200px;
+        width: 400px;
+        justify-content: center;
+        text-align: center;
+        background-color: white;
+        background-image: url(/schaar.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        border: 2px solid white;
+    }
